@@ -1,0 +1,219 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(231deg,rgba(22,6,40,1)0%,rgba(52,28,79,1) 50%,rgba(88,7,125,1) 100%);
+
+}
+.container{
+    width: 98%;
+    max-width: 450px;
+}
+.heading{
+    color: white;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.2;
+}
+.display-container{
+
+    position: relative;
+    background-color: darkviolet;
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid violet;
+    margin: 1rem 0;
+    padding-top: 0.35rem;
+}
+.display{
+    width: 100%;
+    background-color: transparent;
+    padding: 1.15rem 1rem;
+    color: yellowgreen;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing:1px;
+    padding-right: 3.25rem;
+    border: none;
+
+}
+.display::placeholder{
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 30px;
+    color: yellow;
+    opacity: 0.65;
+    text-transform: uppercase;
+    transform: translateY(-50%);
+}
+.display-container button{
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+}
+.display-container button i{
+  font-size: 2rem;
+  
+ 
+}
+.input-container{
+    width: 100%;
+    background-color:#29003b;
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid violet;
+    padding: 2rem;
+}
+.length-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.length-container p:nth-child(1){
+    color:white;
+    font-size: 1.5rem;
+}
+.length-container p:nth-child(2){
+    color:yellow;
+    font-size: 1.5rem;
+}
+.strength-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+    margin-bottom:2rem ;
+}
+.strength-container p{
+    color: white;
+    font-size: 1.5rem;
+}
+.indicator{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    
+}
+.generateBtn{
+    width: 100%;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    text-align: center;
+    border-radius: 0.75rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 1.25rem;
+    background-color: blueviolet;
+    border-bottom: 0.35rem solid yellow;
+
+
+}
+.check{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+}
+.check input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border:  1px solid cyan;
+    position: relative;
+    cursor: pointer;
+    border-radius: 0.35rem;
+}
+.check input:checked{
+    background-color: cyan;
+}
+.check input:checked::before{
+    content: '✔';
+    position: absolute;
+    color: black;
+    font-size: 1.05rem;
+    left: 50%;
+    top: -3.5px;
+    transform: translateX(-50%) translateY(10%);
+   
+}
+.check label{
+    color: white;
+    font-size: 1.25rem;
+    letter-spacing: 0.75px;
+
+}
+.slider{
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    background-color: violet;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    height: 0.75rem;
+    background: linear-gradient(231deg,rgb(169, 102, 245)0%,rgb(183, 151, 220) 50%,rgb(208, 108, 255) 100%);
+    border: none;
+    outline:none ;
+    
+    
+
+}
+.slider::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: yellow; 
+    cursor: pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px rgba(255, 229, 61, 0.50);
+    transition: all 100ms ease-in;
+}
+.slider:focus{
+    outline: 3px solid yellow;
+}
+.slider.slider::-webkit-slider-thumb:hover{
+    outline: 2px solid yellow;
+    background-color: black;
+    box-shadow: 0px 0px 25px 5px rgba(255,229,61,0.80);
+}
+
+.copy-button{
+    background-color: transparent;
+    border: none;
+}
+.cpy{
+   position: absolute;
+   background-color: violet;
+   color: yellow;
+   font-size: 1.25rem;
+   top:-35px;
+   left: -25px;
+   padding: 5px 10px;
+   border-radius: 1rem;
+   opacity: 0;
+   transform: scale(0);
+   transform-origin: bottom;
+   transition: all 250mx ease-in-out;
+}
+.cpy.active{
+ opacity: 1;
+ transform: scale(1);   
+}
